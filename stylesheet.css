@@ -10,20 +10,24 @@ head{
 	margin:0;
 	padding:0;
 }
+h1{
+	margin:0;
+	padding:0;
+}
 
 .object{
 	height:100%;
 	width:100%;
-	background-size:cover;x
+	background-size:cover;
 	background-attachment:fixed;
 }
 
 .one{
-	background-image:url(1.jpg);
+	background-image:url('1.jpg');
 }
 
 .two{
-	background-image:url(2.jpg);
+	background-image:url('2.jpg');
 }
 .three{
 
