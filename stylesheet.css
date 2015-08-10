@@ -3,6 +3,12 @@ html, body {
 	width:100%;
 	padding:0;
 	margin:0;
+
+}
+
+head{
+	margin:0;
+	padding:0;
 }
 
 .object{
@@ -10,4 +16,18 @@ html, body {
 	width:100%;
 	background-size:cover;
 	background-attachment:fixed;
+}
+
+.one{
+	background-image:url()
+}
+
+.two{
+
+}
+.three{
+
+}
+.four{
+
 }
