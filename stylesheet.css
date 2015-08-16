@@ -1,5 +1,7 @@
 html,body{
+
 	background: url(floorBack.jpg) no-repeat fixed;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,28 +12,45 @@ html,body{
 }
 
 div{
-min-height: 100%;
+height: 100%;
 height:inherit;
 position: relative;
 
 }
 
+.topText{
+	font-family: 'Poiret One';
+
+	font-size: 30px;
 
 
-#headerTag{
-height:3px;
-text-align:right;
-margin-right: 20px;
-margin-top:10px;
+
 }
 
+#headerTag{
+
+	height:40px;
+	text-align:right;
+
+
+
+	background-color: black;
+
+}
+
+#specialWords{
+	color:white;
+	margin-right:20px;
+	margin-left:20px;
+
+}
 #wrapper{
 	height:0%;
 	position:fixed;
 }
 #smallwrapper{
 	margin: 0;
-	background: yellow;
+	background-color: yellow;
 	position: absolute;
 	top: 50%;
 	width: 100%;
