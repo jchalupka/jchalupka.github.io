@@ -1,27 +1,34 @@
-html,body,h1{
-	background: url(2.jpg) no-repeat center center fixed;
+html,body{
+	background: url(floorBack.jpg) no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
-  height: 100%;
+  height:100%;
   margin: 0;
 }
 
 div{
+min-height: 100%;
+height:inherit;
+position: relative;
+
+}
 
 
+
+#headerTag{
+height:3px;
+text-align:right;
+margin-right: 20px;
+margin-top:10px;
 }
 
 #wrapper{
-	min-height: 100%;
-
-	position: relative;
-
+	height:0%;
+	position:fixed;
 }
-
-
 #smallwrapper{
 	margin: 0;
 	background: yellow;
@@ -31,5 +38,9 @@ div{
 	height:auto;
 	text-align: center;
 
+
+}
+
+#final{
 
 }
