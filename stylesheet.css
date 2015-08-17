@@ -23,8 +23,6 @@ position: relative;
 
 	font-size: 30px;
 
-
-
 }
 
 #headerTag{
@@ -40,19 +38,19 @@ position: relative;
 
 #specialWords{
 	color:white;
-	margin-right:20px;
+	margin-right:20px
 	margin-left:20px;
+	margin-top:0px;
 
 }
 #wrapper{
 	height:0%;
 	position:fixed;
+
 }
 #smallwrapper{
-	margin: 0;
-	background-color: yellow;
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	width: 100%;
 	height:auto;
 	text-align: center;
@@ -62,4 +60,9 @@ position: relative;
 
 #final{
 
+}
+
+a:link{
+	color:inherit;
+	text-decoration:none;
 }
