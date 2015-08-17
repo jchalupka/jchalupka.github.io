@@ -38,9 +38,8 @@ position: relative;
 
 #specialWords{
 	color:white;
-	margin-right:20px
-	margin-left:20px;
 	margin-top:0px;
+	margin-right:20px;
 
 }
 #wrapper{
@@ -60,9 +59,4 @@ position: relative;
 
 #final{
 
-}
-
-a:link{
-	color:inherit;
-	text-decoration:none;
 }
