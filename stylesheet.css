@@ -1,67 +1,73 @@
-html,body{
-
-	background: url(floorBack.jpg) no-repeat fixed;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  height:100%;
-  margin: 0;
+html{
+	height:100%;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	overflow-x: hidden;
 }
+body{
+	background-image: url('mountain.jpg');
+	position: fixed;
 
-div{
-height: 200%;
+	background-repeat: no-repeat;
 
-position:relative;
+	background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	-webkit-background-size:cover;
+
+
+
+	height:100%;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	overflow-x: hidden;
 
 }
+#one{
 
-.topText{
+	bottom:50%;
+	background: linear-gradient(
+		to right,
+		blue 15%,aqua 18%,green 33%,yellow 33%,orange 66.45%,red 33.66%);
+		)
+left:50%;
+	text-align: center;
+	width:100%;
+	position: fixed;
+
+	background-size: cover;
+
 	font-family: 'Poiret One';
-	font-size: 30px;
+	font-weight: 600;
+	font-size: 50px;
 
 }
-
-
-#headerTag{
-	height:40px;
-	text-align:right;
+#two{
+	color: inherit;
+}
+footer{
 	background-color: black;
-	color:white;
-	margin-right: 0px;
-}
-#headerText{
-	margin-right: 20px;
-	margin-top:0px;
-}
-
-#wrapper{
-	height:0%;
+	height:20px;
 	position:fixed;
-
-}
-#smallwrapper{
-	z-index:10;
-	position: absolute;
-	top: 20%;
-	width: 100%;
-	height:auto;
+	bottom:0;
+	width:100%;
+	color:white;
+	font-family: 'Poiret One';
 	text-align: center;
 }
 
-
-#side-ways{
-	color:blue;
-	transform: rotate(90deg);
-	transform-origin: left top 0;
+a:link{
+	color:white;
+	font-style: normal;
+	font-variant: normal;
+	text-decoration: none;
 }
 
-footer{
-	height:40px;
-	text-align:center;
-	background-color:black;
-	color:white;
-
+a:visited{
+	color:red;
+}
+a:hover{
+	font-style: italic;
 }
