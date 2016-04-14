@@ -52,7 +52,7 @@ body{
 
 }
 #button1{
-    background-color: #4CAF50; /* Green */
+    background-color: #black; /* Green */
     border: none;
     color: white;
     padding: 30px 40px;
@@ -91,6 +91,7 @@ footer{
 }
 
 a:link{
+	color: white;
 	font-style: normal;
 	font-variant: normal;
 	text-decoration: none;
