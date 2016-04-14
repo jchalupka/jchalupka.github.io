@@ -6,7 +6,6 @@ html{
 	overflow-x: hidden;
 }
 body{
-	background-image: url('mountain.jpg');
 	position: fixed;
 
 	background-repeat: no-repeat;
