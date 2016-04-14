@@ -4,6 +4,8 @@ html{
 	margin:0px;
 	padding:0px;
 	overflow-x: hidden;
+	font-family: 'Alegreya Sans', sans-serif;
+
 }
 
 ul {
@@ -20,12 +22,15 @@ li {
 
 li a {
     display: block;
-    color: red;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+	font-family: 'Poiret One';
+}
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
@@ -70,7 +75,6 @@ body{
 
 	background-size: cover;
 
-	font-family: 'Alegreya Sans', sans-serif;
 	font-weight: 600;
 	font-size: 50px;
 
@@ -86,6 +90,5 @@ footer{
 	bottom:0;
 	width:100%;
 	color:white;
-	font-family: 'Poiret One';
 	text-align: center;
 }
