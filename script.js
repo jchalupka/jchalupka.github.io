@@ -11,5 +11,5 @@ document.getElementById("foot01").innerHTML =
 */
 
 function showAlert () {
-	alert("Hello World");
+	//alert("Hello World");
 }
