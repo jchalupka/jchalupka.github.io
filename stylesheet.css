@@ -30,6 +30,7 @@ a {
 	color: white;
 	text-decoration: none;
 	font-family: 'Poiret One';
+
 }
 /* Change the link color to #111 (black) on hover */
 li a:hover {
@@ -37,17 +38,13 @@ li a:hover {
 }
 
 body{
-
 	position: fixed;
-
 	background-repeat: no-repeat;
 
 	background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-webkit-background-size:cover;
-
-
 
 	height:100%;
 	width:100%;
@@ -56,6 +53,7 @@ body{
 	overflow-x: hidden;
 
 }
+
 #button1{
     background-color: black; /* Green */
     border: none;
@@ -83,6 +81,7 @@ body{
 	bottom:50%;
 	color: inherit;
 }
+
 footer{
 	background-color: black;
 	height:20px;
