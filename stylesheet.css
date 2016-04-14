@@ -38,7 +38,10 @@ body{
 #one{
 
 	bottom:50%;
-	background: none;
+	background: linear-gradient(
+		to right,
+		blue 15%,aqua 18%,green 33%,yellow 33%,orange 66.45%,red 33.66%);
+		)
 	left:50%;
 	text-align: center;
 	width:100%;
