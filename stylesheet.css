@@ -36,7 +36,6 @@ body{
     font-size: 24px;
 }
 #one{
-	bottom:50%;
 	text-align: center;
 	width:100%;
 	position: fixed;
@@ -49,6 +48,8 @@ body{
 
 }
 #two{
+	bottom:50%;
+
 	color: inherit;
 }
 footer{
