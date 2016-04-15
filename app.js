@@ -73,7 +73,7 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	me.draw = function(){
 		// Erase previous draw
 		me.ctx.fillStyle = 'white';
-		me.ctx.globalAlpha=0.1;
+		
 	 	me.ctx.fillRect(0,0,me.canvas.width,me.canvas.height);
 
 	 	// Draw living squares
@@ -107,5 +107,5 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	return me;
 };
 
-var app = new App("game", 1000, 1000, Math.round(window.innerWidth/10), Math.round(window.innerHeight/10));
+var app = new App("game", 1000, 1000, Math.round(window.innerWidth/20), Math.round(window.innerHeight/20));
 app.start();

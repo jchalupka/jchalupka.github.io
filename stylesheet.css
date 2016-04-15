@@ -59,7 +59,7 @@ body{
 #one{
 
 
-	style=z-index: 2;
+	z-index: 2;
 
 	bottom:50%;
 	text-align: center;
@@ -67,7 +67,6 @@ body{
 	position: absolute;
 
 	background-size: cover;
-
 	font-weight: 600;
 	font-size: 50px;
 
@@ -78,9 +77,14 @@ body{
 	color: inherit;
 }
 
+#holder{
+	z-index: 1;
+}
+
 #game{
-	style=z-index: 1;
+
 	background-repeat: no-repeat;
+
 }
 
 footer{
