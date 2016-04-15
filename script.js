@@ -12,7 +12,7 @@ var bgImage = new Image();
 bgImage.onload = function () {
 	bgReady = true;
 };
-
+bgImage.src = "images/background.png";
 // Hero image
 var heroReady = false;
 var heroImage = new Image();
@@ -27,6 +27,7 @@ var monsterImage = new Image();
 monsterImage.onload = function () {
 	monsterReady = true;
 };
+monsterImage.src = "images/monster.png";
 
 // Game objects
 var hero = {
@@ -70,6 +71,7 @@ var update = function (modifier) {
 	if (39 in keysDown) { // Player holding right
 		hero.x += hero.speed * modifier;
 	}
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 	// Are they touching?
 	if (
@@ -86,7 +88,7 @@ var update = function (modifier) {
 // Draw everything
 var render = function () {
 	if (bgReady) {
-		ctx.drawImage(bgImage, 0, 0);
+		ctx.drawImage(bgImage, 0, 0, canvas.width, canvas.height);
 	}
 
 	if (heroReady) {

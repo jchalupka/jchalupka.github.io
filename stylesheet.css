@@ -40,7 +40,6 @@ li a:hover {
 body{
 	position: fixed;
 	background-repeat: no-repeat;
-
 	background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -80,3 +79,5 @@ footer{
 	color:white;
 	text-align: center;
 }
+
+
