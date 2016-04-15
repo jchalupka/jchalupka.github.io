@@ -1,4 +1,5 @@
 var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
+	
 	var me = this;
 	// Grab the canvas
 	me.canvas = document.getElementById(targetElementId);
@@ -13,8 +14,8 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	body.style.overflow = "hidden";
 
 	// Set height and width to window inner height
-	viewWidth = me.canvas.width = document.width ;//viewWidth || 600;
-  	viewHeight = me.canvas.height = document.height ;//viewHeight || 600;
+	viewWidth = me.canvas.width = window.innerWidth;//viewWidth || 600;
+  	viewHeight = me.canvas.height = window.innerHeight;//viewHeight || 600;
 
   	squaresX = squaresX || 20;
   	squaresY = squaresY || 20;
@@ -45,8 +46,8 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	};*/
 
 	window.onresize = function(ev){
-		viewWidth =   me.canvas.width =  document.width;//viewWidth || 600;
-  		viewHeight =  me.canvas.height =  document.height;//viewHeight || 600;
+		viewWidth =  me.canvas.width =  window.innerWidth;//viewWidth || 600;
+  		viewHeight =  me.canvas.height =  document.innerHeight;//viewHeight || 600;
 	};
 
 	me.canvas.addEventListener('mousemove', handleClick);
@@ -71,9 +72,10 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	};
 
 	me.draw = function(){
+
 		// Erase previous draw
 		me.ctx.fillStyle = 'white';
-		
+		me.ctx.globalAlpha = 0.2;
 	 	me.ctx.fillRect(0,0,me.canvas.width,me.canvas.height);
 
 	 	// Draw living squares
@@ -87,8 +89,8 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 
 
 	 	// Draw grid
-	 	/*
-	 	me.ctx.fillStyle = 'this does nothing';
+	 	
+	 	/*me.ctx.fillStyle = 'this does nothing';
 	 	for(var x = 0; x <= viewWidth; x+=_squareWidth){
 	 		me.ctx.beginPath();
 	 		me.ctx.moveTo(x, 0);
@@ -107,5 +109,6 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	return me;
 };
 
-var app = new App("game", 1000, 1000, Math.round(window.innerWidth/20), Math.round(window.innerHeight/20));
+var app = new App("game", 1000, 1000, Math.round(window.innerWidth/10), Math.round(window.innerHeight/10));
 app.start();
+
