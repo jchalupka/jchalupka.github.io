@@ -47,7 +47,7 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 
 	window.onresize = function(ev){
 		viewWidth =  me.canvas.width =  window.innerWidth;//viewWidth || 600;
-  		viewHeight =  me.canvas.height =  document.innerHeight;//viewHeight || 600;
+  		viewHeight =  me.canvas.height =  window.innerHeight;//viewHeight || 600;
 	};
 
 	me.canvas.addEventListener('mousemove', handleClick);
