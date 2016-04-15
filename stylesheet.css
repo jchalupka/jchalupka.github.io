@@ -6,17 +6,20 @@ html{
 	width:100%;
 	margin:0px;
 	padding:0px;
-	overflow-x: hidden;
+	overflow-x: scroll;
 	font-family: 'Alegreya Sans', sans-serif;
 
 }
 
 ul {
+	position: fixed;
+	width:100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    z-index: 50;
 }
 
 li {
@@ -41,7 +44,6 @@ li a:hover {
 }
 
 body{
-	position: absolute;
 	background-repeat: no-repeat;
 	background-size:cover;
 	-moz-background-size:cover;
@@ -52,29 +54,23 @@ body{
 	width:100%;
 	margin:0px;
 	padding:0px;
-	overflow-x: hidden;
+}
+
+#homeID{
 
 }
 
-#one{
+#font{
+		z-index: 1;
 
-
-	z-index: 1;
-
-	bottom:50%;
-	text-align: center;
 	width:100%;
 	position: absolute;
-
 	background-size: cover;
 	font-weight: 600;
 	font-size: 50px;
 
-}
-
-#two{
 	bottom:50%;
-	color: inherit;
+	text-align: center;
 }
 
 #holder{
@@ -84,6 +80,33 @@ body{
 #game{
 
 	background-repeat: no-repeat;
+	z-index: -1;
+
+}
+
+#contactID{
+	z-index: 1;
+	top:100%;
+	height:100%;
+
+	text-align: center;
+	width:100%;
+	position: absolute;
+
+	background-size: cover;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+#projectsID{
+
+}
+
+#interestsID{
+
+}
+
+#coolStuffID{
 
 }
 
@@ -95,6 +118,7 @@ footer{
 	width:100%;
 	color:white;
 	text-align: center;
+	z-index: 50;
 }
 
 
