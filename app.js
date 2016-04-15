@@ -13,8 +13,8 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	body.style.overflow = "hidden";
 
 	// Set height and width to window inner height
-	viewWidth = me.canvas.width = window.innerWidth ;//viewWidth || 600;
-  	viewHeight = me.canvas.height = window.innerHeight ;//viewHeight || 600;
+	viewWidth = me.canvas.width = document.width ;//viewWidth || 600;
+  	viewHeight = me.canvas.height = document.height ;//viewHeight || 600;
 
   	squaresX = squaresX || 20;
   	squaresY = squaresY || 20;
@@ -26,7 +26,7 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 
 
   	// Handle Click events
-	var _mouseDown = false;
+	var _mouseDown = true;
 	var handleClick = function(event){
 		var x = event.pageX - me.canvas.offsetLeft;
 		var y = event.pageY - me.canvas.offsetTop;
@@ -38,27 +38,23 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 		return;
 	};
 
-	var _startSim = false;
+	var _startSim = true;
 
-	window.onkeydown = function(ev){
+	/*window.onkeydown = function(ev){
 		_startSim = !_startSim;
-	};
+	};*/
 
 	window.onresize = function(ev){
-		viewWidth = me.canvas.width = window.innerWidth;//viewWidth || 600;
-  		viewHeight = me.canvas.height = window.innerHeight;//viewHeight || 600;
+		viewWidth =   me.canvas.width =  document.width;//viewWidth || 600;
+  		viewHeight =  me.canvas.height =  document.height;//viewHeight || 600;
 	};
 
-	me.canvas.addEventListener('mousedown', function(event){
-		_mouseDown = true;
-		handleClick(event);
-		me.canvas.addEventListener('mousemove', handleClick);
-	});
-
+	me.canvas.addEventListener('mousemove', handleClick);
+/*
 	me.canvas.addEventListener('mouseup', function(event){
 		_mouseDown = false;
 		me.canvas.removeEventListener('mousemove', handleClick);
-	});
+	});*/
 
 	me.start = function(){
 		setInterval(function(){
@@ -77,14 +73,14 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	me.draw = function(){
 		// Erase previous draw
 		me.ctx.fillStyle = 'white';
-		me.ctx.globalAlpha=0.01;
+		me.ctx.globalAlpha=0.1;
 	 	me.ctx.fillRect(0,0,me.canvas.width,me.canvas.height);
 
 	 	// Draw living squares
 	 	grid.filter(function(cell){
 	 		return cell.isAlive;
 	 	}).forEach(function(cell){
-	 		me.ctx.fillStyle = '#333';
+	 		me.ctx.fillStyle = 'black';
 	 		me.ctx.fillRect(cell.x * _squareWidth, cell.y * _squareHeight, _squareWidth, _squareHeight);
 	 	});
 
@@ -111,5 +107,5 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	return me;
 };
 
-var app = new App("game", 1000, 1000, Math.round(window.innerWidth/20), Math.round(window.innerHeight/20));
+var app = new App("game", 1000, 1000, Math.round(window.innerWidth/10), Math.round(window.innerHeight/10));
 app.start();

@@ -1,4 +1,7 @@
 html{
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none;
 	height:100%;
 	width:100%;
 	margin:0px;
@@ -38,7 +41,7 @@ li a:hover {
 }
 
 body{
-	position: fixed;
+	position: absolute;
 	background-repeat: no-repeat;
 	background-size:cover;
 	-moz-background-size:cover;
@@ -54,10 +57,14 @@ body{
 }
 
 #one{
+
+
+	style=z-index: 2;
+
 	bottom:50%;
 	text-align: center;
 	width:100%;
-	position: fixed;
+	position: absolute;
 
 	background-size: cover;
 
@@ -65,9 +72,15 @@ body{
 	font-size: 50px;
 
 }
+
 #two{
 	bottom:50%;
 	color: inherit;
+}
+
+#game{
+	style=z-index: 1;
+	background-repeat: no-repeat;
 }
 
 footer{
