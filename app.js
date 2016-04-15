@@ -72,7 +72,8 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	};
 
 	me.draw = function(){
-
+		var colors = [ 'red' ];
+		var random_color = colors[Math.floor(Math.random() * colors.length)];
 		// Erase previous draw
 		me.ctx.fillStyle = 'white';
 		me.ctx.globalAlpha = 0.2;
@@ -82,7 +83,7 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	 	grid.filter(function(cell){
 	 		return cell.isAlive;
 	 	}).forEach(function(cell){
-	 		me.ctx.fillStyle = 'black';
+	 		me.ctx.fillStyle = random_color;
 	 		me.ctx.fillRect(cell.x * _squareWidth, cell.y * _squareHeight, _squareWidth, _squareHeight);
 	 	});
 
