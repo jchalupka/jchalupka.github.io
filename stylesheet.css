@@ -61,9 +61,10 @@ body{
 }
 
 #font{
-		z-index: 1;
-
 	width:100%;
+	background-color: transparent;
+	pointer-events: none;
+	z-index: 1;
 	position: absolute;
 	background-size: cover;
 	font-weight: 600;
