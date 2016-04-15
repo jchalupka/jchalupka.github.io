@@ -110,6 +110,6 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	return me;
 };
 
-var app = new App("game", 1000, 1000, Math.round(window.innerWidth/15), Math.round(window.innerHeight/15));
+var app = new App("game", 1000, 1000, Math.round(window.innerWidth/5), Math.round(window.innerHeight/5));
 app.start();
 
