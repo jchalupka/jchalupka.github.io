@@ -61,6 +61,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     }).join('&')
     xhr.send(encoded);
   }
+  $('#contact').modal('toggle')
 }
 function loaded() {
   
@@ -71,3 +72,5 @@ function loaded() {
   console.log(form);
 };
 document.addEventListener('DOMContentLoaded', loaded, false);
+
+
