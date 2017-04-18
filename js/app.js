@@ -121,6 +121,6 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	return me;
 };
 
-var app = new App("game", window.innerWidth, window.innerHeight, Math.round(window.innerWidth/8), Math.round(window.innerHeight/8));
+var app = new App("game", window.innerWidth, window.innerHeight, Math.round(window.innerWidth/10), Math.round(window.innerHeight/10));
 app.start();
 
