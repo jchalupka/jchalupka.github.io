@@ -62,6 +62,7 @@ var App = function(targetElementId, viewWidth, viewHeight, squaresX, squaresY){
 	};
 
 	me.canvas.addEventListener('mousemove', handleClick);
+	me.canvas.addEventListener('touchmove', handleClick);
 /*
 	me.canvas.addEventListener('mouseup', function(event){
 		_mouseDown = false;
