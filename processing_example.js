@@ -32,6 +32,7 @@ const sketch = (p) => {
 		run() {
 			this.update();
 			this.seekMouse();
+			this.flock();
 			this.borders();
 			this.render();
 		}
@@ -80,6 +81,92 @@ const sketch = (p) => {
 			steer.limit(this.maxforce);
 
 			return steer;
+		}
+
+		flock() {
+			let sep = this.seperate();
+			let ali = this.align();
+			let coh = this.cohesion();
+
+			sep.mult(2.5);
+			ali.mult(1.0);
+			coh.mult(1.0);
+
+			this.applyForce(sep);
+			this.applyForce(ali);
+			this.applyForce(coh);
+		}
+
+		seperate() {
+			let desired = 50;
+			let steer = p.createVector(0, 0);
+			let count = 0;
+			for (let i = 0; i < vehicles.length; i++) {
+				let d = p5.Vector.dist(this.position, vehicles[i].position);
+				
+				if ((d > 0) && (d < desired)) {
+					// Calculate vector pointing away from neighbor
+					var diff = p5.Vector.sub(this.position, vehicles[i].position);
+					diff.normalize();
+					diff.div(d); // Weight by distance
+					steer.add(diff);
+					count++; // Keep track of how many
+				}
+			}
+			if (count > 0) {
+				steer.div(count);
+			}
+
+			if (steer.mag() > 0) {
+				// Implement Reynolds: Steering = Desired - Velocity
+				steer.normalize();
+				steer.mult(this.maxspeed);
+				steer.sub(this.velocity);
+				steer.limit(this.maxforce);
+			}
+			return steer;
+		}
+
+		align() {
+			var neighbordist = 50;
+			var sum = p.createVector(0, 0);
+			var count = 0;
+			for (var i = 0; i < vehicles.length; i++) {
+				var d = p5.Vector.dist(this.position, vehicles[i].position);
+				if ((d > 0) && (d < neighbordist)) {
+				sum.add(vehicles[i].velocity);
+				count++;
+				}
+			}
+			if (count > 0) {
+				sum.div(count);
+				sum.normalize();
+				sum.mult(this.maxspeed);
+				var steer = p5.Vector.sub(sum, this.velocity);
+				steer.limit(this.maxforce);
+				return steer;
+			} else {
+				return p.createVector(0, 0);
+			}
+		}
+
+		cohesion() {
+			var neighbordist = 50;
+			var sum = p.createVector(0, 0); // Start with empty vector to accumulate all locations
+			var count = 0;
+			for (var i = 0; i < vehicles.length; i++) {
+				var d = p5.Vector.dist(this.position, vehicles[i].position);
+				if ((d > 0) && (d < neighbordist)) {
+				sum.add(vehicles[i].position); // Add location
+				count++;
+				}
+			}
+			if (count > 0) {
+				sum.div(count);
+				return this.seek(sum); // Steer towards the location
+			} else {
+				return p.createVector(0, 0);
+			}
 		}
 	}
 
